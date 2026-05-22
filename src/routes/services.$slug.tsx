@@ -123,7 +123,7 @@ function ServiceDetailPage() {
             <div className="eyebrow">How this service runs</div>
             <h2 className="mt-3">Operational flow</h2>
             <ol className="mt-6 space-y-3">
-              {detail.how.map((step, i) => (
+              {detail.how.map((step: string, i: number) => (
                 <li key={i} className="card-surface p-4 flex gap-3">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-semibold">{i + 1}</span>
                   <span className="text-sm leading-relaxed pt-0.5">{step}</span>
