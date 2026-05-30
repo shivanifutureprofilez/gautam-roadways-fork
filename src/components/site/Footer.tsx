@@ -7,8 +7,8 @@ export function Footer() {
     <footer className="mt-24 border-t border-border bg-primary text-primary-foreground">
       <div className="container-x py-14 grid gap-10 md:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2">
-            <img src={'/GrLogo2.png'} alt="" width={36} height={36} className="h-10 md:h-14 w-30 md:w-42  p-1" />
+          <div className="flex">
+            <img src={'/GrLogo2.png'} alt="" width={36} height={36} className="h-10 md:h-14 w-30 md:w-48" />
             {/* <div>
               <div className="font-bold tracking-tight">GAUTAM ROADWAYS</div>
               <div className="text-[10px] uppercase tracking-[0.2em] text-white/60">Est. {COMPANY.since}</div>
