@@ -55,7 +55,7 @@ export function Footer() {
             </div>
             <div className="mt-4">
               <a
-                href="https://linkedin.com/company/YOUR-LINK"
+                href="https://www.linkedin.com/in/puneetbagga99"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"

@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import warehouseImg from "@/assets/warehouse.jpg";
 import { CTABlock } from "@/components/site/CTA";
+import GrTrucks from "@/assets/GrTrucks.png";
+import { Linkedin } from "lucide-react";
+import GrFounder from "@/assets/GrFounder.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -73,7 +76,7 @@ function About() {
       </section>
 
       <section className="container-x py-16 grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-        <img src={warehouseImg} alt="Operations" width={1600} height={1000} loading="lazy"
+        <img src={GrTrucks} alt="Operations" width={1600} height={1000} loading="lazy"
           className="rounded-2xl border border-border object-cover w-full h-[480px]" />
         <div>
           {/* <div className="eyebrow">Operational philosophy</div>
@@ -156,7 +159,68 @@ function About() {
           </ul>
         </div>
       </section>
+      <section className="border-t border-border bg-secondary/40">
+        <div className="container-x py-16">
+          <div className="eyebrow">Leadership</div>
 
+          <h2 className="mt-3 max-w-3xl">
+            Three generations of trust. One commitment to service.
+          </h2>
+
+          <p className="mt-4 max-w-2xl text-muted-foreground">
+            Gautam Roadways continues to grow under the leadership of Puneet Bagga,
+            carrying forward a family legacy built on reliability, customer
+            relationships and operational excellence.
+          </p>
+
+          <div className="mt-10  ">
+            <div className="card-surface p-8">
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+
+                <img
+                  src={GrFounder}
+                  alt="Puneet Bagga"
+                  className="h-fit w-50 rounded-2xl object-cover border border-border shrink-0"
+                />
+
+                <div className="flex-1">
+                  <div className="text-xs uppercase tracking-[0.18em] text-accent font-semibold">
+                    Third Generation Leadership
+                  </div>
+
+                  <h3 className="mt-2 text-3xl font-bold">
+                    Puneet Bagga
+                  </h3>
+
+                  <p className="mt-1 text-base text-muted-foreground">
+                    Director, Gautam Roadways
+                  </p>
+
+                  <div className="mt-5 h-px bg-border" />
+
+                  <p className="mt-5 text-muted-foreground leading-7">
+                    Joining the organization in 2000, Puneet Bagga has helped modernize
+                    operations while preserving the values that have defined Gautam
+                    Roadways since 1959. His focus on customer satisfaction,
+                    operational excellence and long-term relationships continues to
+                    drive the company forward.
+                  </p>
+
+                  <a
+                    href="https://www.linkedin.com/in/puneetbagga99"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#0077B5] px-5 py-3 text-white font-medium hover:opacity-90 transition"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                    Connect on LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <CTABlock title="Move your next load with us." subtitle="Talk to the dispatch desk that has run this corridor for six decades." />
     </>
   );

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Phone, MapPin, MessageCircle, AlertTriangle, Mail } from "lucide-react";
+import { Phone, MapPin, MessageCircle, AlertTriangle, Mail, Navigation } from "lucide-react";
 import { BRANCHES, COMPANY, COMPLAINT, telHref, waHref } from "@/lib/company";
 
 export const Route = createFileRoute("/branches")({
@@ -14,6 +14,14 @@ export const Route = createFileRoute("/branches")({
   }),
   component: BranchesPage,
 });
+
+const directionsLinks: Record<number, string> = {
+  0: "https://www.google.co.in/maps/place/Gautam+Roadways/@26.9065447,75.8388554,17z/data=!3m1!4b1!4m6!3m5!1s0x396db6adbe0a7c29:0x68093dd67a0a0f24!8m2!3d26.9065448!4d75.8437263!16s%2Fg%2F1w4540ds?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+
+  1: "https://www.google.co.in/maps/place/Gautam+Roadways/@28.6517751,77.1964835,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfd66aa5b7887:0xf320c50d29e62c50!8m2!3d28.6517752!4d77.2013544!16s%2Fg%2F1tds5299?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+
+  2: "https://www.google.co.in/maps/place/Gautam+Roadways/@26.8213005,75.7782318,17z/data=!3m1!4b1!4m6!3m5!1s0x396dca74590b7ffb:0x5fa8ce7878c34c58!8m2!3d26.8213005!4d75.7782318!16s%2Fg%2F11ckh8lgrh?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+};
 
 function BranchesPage() {
   return (
@@ -42,15 +50,37 @@ function BranchesPage() {
             <div className="mt-4 text-sm">{b.address}</div>
             <div className="mt-5 flex flex-wrap gap-2">
               {b.phones.map((p) => (
-                <a key={p} href={telHref(p)} className="btn btn-ghost text-sm">
+                <a key={p} href={telHref(p)} className="btn btn-ghost text-xs">
                   <Phone className="h-3.5 w-3.5" /> {p}
                 </a>
               ))}
             </div>
-            <a href={waHref(`Hello, I'd like to reach ${b.name}.`)} target="_blank" rel="noopener"
-              className="btn btn-whatsapp text-sm mt-3 self-start">
-              <MessageCircle className="h-4 w-4" /> WhatsApp
-            </a>
+            <div className={`mt-4 grid gap-3 ${directionsLinks[idx]
+                ? "grid-cols-1 md:grid-cols-2"
+                : "grid-cols-1"
+              }`}>
+              <a
+                href={waHref(`Hello, I'd like to reach ${b.name}.`)}
+                target="_blank"
+                rel="noopener"
+                className="btn btn-whatsapp text-sm w-full justify-center"
+              >
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp
+              </a>
+
+              {directionsLinks[idx] && (
+                <a
+                  href={directionsLinks[idx]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+                >
+                  <Navigation className="h-4 w-4" />
+                  Directions
+                </a>
+              )}
+            </div>
           </article>
         ))}
       </section>

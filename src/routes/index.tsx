@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone, MessageCircle, Truck, Package, Warehouse, MapPin, ShieldCheck, Clock, CircleDot } from "lucide-react";
 import heroImg from "@/assets/GrHero.png";
-import warehouseImg from "@/assets/warehouse.jpg";
+// import warehouseImg from "@/assets/warehouse.jpg";
+import GrTrucks from "@/assets/GrTrucks.png";
+import GrWarehouse from "@/assets/GrWarehouse.png";
 import loadingImg from "@/assets/loading.jpg";
 import { COMPANY, ROUTES, SERVICES, telHref, waHref } from "@/lib/company";
 import { CTABlock } from "@/components/site/CTA";
@@ -36,8 +38,16 @@ function Home() {
         <div className="relative container-x py-20 md:py-32 text-primary-foreground">
           <div className="max-w-3xl">
             <div className="eyebrow text-white/70 capitalize">Trusted Logistics & Freight partners since 1959</div>
-            <h1 className="mt-5 text-white">
-              <span className="text-accent">Gautam Roadways </span>- Reliable freight transport for businesses that can't afford delays.
+            {/* <h1 className="mt-5 text-white">
+            <span className="text-accent">Gautam Roadways </span>- Reliable freight transport for businesses that can't afford delays.
+            </h1> */}
+            <h1 className="mt-4 text-white leading-tight">
+              <span className="block text-accent text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
+                Gautam Roadways
+              </span>
+              <span className="block text-2xl md:text-3xl font-normal text-white/85 mt-3 max-w-2xl leading-snug">
+                Reliable freight transport for businesses that can't afford delays.
+              </span>
             </h1>
             <p className="mt-5 text-lg text-white/80 max-w-2xl">
               We operate structured parcel, PTL, and full truckload logistics across key industrial routes in North India built on decades of operational discipline. Every shipment is handled with planning, tracking, and accountability from pickup to delivery.
@@ -136,7 +146,7 @@ function Home() {
       {/* LEGACY / OPS */}
       <section className="container-x py-20 grid gap-10 lg:grid-cols-2 lg:items-center">
         <div className="relative">
-          <img src={warehouseImg} alt="Warehouse operations" width={1600} height={1000} loading="lazy"
+          <img src={GrTrucks} alt="Warehouse operations" width={1600} height={1000} loading="lazy"
             className="rounded-2xl border border-border object-cover w-full h-[420px]" />
           <div className="absolute -bottom-6 -right-4 md:right-6 card-surface p-5 max-w-[260px] hidden sm:block">
             <div className="eyebrow">Since 1959</div>
@@ -191,7 +201,7 @@ function Home() {
             <Link to="/branches" className="btn btn-ghost">All branches</Link>
           </div>
         </div>
-        <img src={loadingImg} alt="Loading operations" width={1600} height={1000} loading="lazy"
+        <img src={GrWarehouse} alt="Loading operations" width={1600} height={1000} loading="lazy"
           className="rounded-2xl border border-border object-cover w-full h-[360px]" />
       </section>
 
