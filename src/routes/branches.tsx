@@ -115,12 +115,12 @@ function BranchesPage() {
         <div className="card-surface overflow-hidden">
           <iframe
             title="Gautam Roadways — Jaipur Head Office"
-            src="https://www.google.com/maps?q=Transport+Nagar+Jaipur+Broadway+Hotel&output=embed"
-            className="w-full h-[420px] border-0"
+            src="https://www.google.com/maps/d/embed?mid=1Hwk-BWwsrIHAHnp6N5XmbPEyu9cewAk&ehbc=2E312F" className="w-full h-[420px] border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
           {/* <iframe title="Gautam Roadways — Jaipur Head Office" referrerPolicy="no-referrer-when-downgrade" className="w-full h-[420px] border-0" src="https://www.google.com/maps/d/embed?mid=1cufVK4IzizMX5Qsd0TxXc_wX2cDRlsQ&ehbc=2E312F" width="640" height="480"></iframe> */}
+        
         </div>
       </section>
     </>

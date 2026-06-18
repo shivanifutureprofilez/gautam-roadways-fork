@@ -64,13 +64,13 @@ export const SERVICES = [
     slug: "factory-pickup",
     name: "Factory Pickup",
     short: "Scheduled pickups from Sitapura, Bagru, Jhotwara and Kukas industrial belts.",
-    image: "warehouse",
+    image: "GrFactory",
   },
   {
     slug: "door-delivery",
     name: "Door-to-Door Delivery",
     short: "Last-mile delivery across Delhi, Gurgaon, Noida, Faridabad and Ghaziabad.",
-    image: "route",
+    image: "GrPickup",
   },
 ] as const;
 

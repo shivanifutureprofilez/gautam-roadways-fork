@@ -7,8 +7,10 @@ import loading from "@/assets/loading.jpg";
 import warehouse from "@/assets/warehouse.jpg";
 import route from "@/assets/route-highway.jpg";
 import { CTABlock } from "@/components/site/CTA";
+import GrFactory from "@/assets/GrFactory.png";
+import GrPickup from "@/assets/GrPickup.png";
 
-const img: Record<string, string> = { ftl, parcel, loading, warehouse, route };
+const img: Record<string, string> = { ftl, parcel, loading, warehouse, route, GrFactory, GrPickup };
 
 export const Route = createFileRoute("/services")({
   head: () => ({
